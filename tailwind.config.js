@@ -16,6 +16,13 @@ export default {
     },
     extend: {
       container: {
+        screens: {
+          // sm: '600px',
+          // md: '728px',
+          // lg: '984px',
+          xl: '1400px',
+          '2xl': '1400px',
+        },
         center: true,
         padding: '1rem'
       },
