@@ -4,10 +4,11 @@
       <p class="uppercase font-semibold text-sm text-white">ЕСТЬ ПОБЕДИТЕЛЬ!</p>
     </div>
 
-    <img src="../assets/img/card.png" alt="Product image of ASER Swift SF314 laptop" />
+    <img src="../assets/img/card.png" alt="Product image of ASER Swift SF314 laptop"/>
 
     <h3 class="font-semibold text-sm pt-3 pb-2">Ноутбук ASER Swift SF314</h3>
-    <p class="font-bold text-sm" :class="{ 'text-brand-orange': supersoon, 'text-black': !supersoon, 'pb-4': !supersoon }">112 250 ₽</p>
+    <p class="font-bold text-sm"
+       :class="{ 'text-brand-orange': supersoon, 'text-black': !supersoon, 'pb-4': !supersoon }">112 250 ₽</p>
 
     <div v-if="available" class="flex items-center justify-between w-full pb-3">
       <p class="text-brand-green font-bold text-sm">Evgen487</p>
@@ -47,14 +48,16 @@
       </div>
     </div>
 
-    <AppButton
-        :outlined="failure"
-        :black="failure"
-        :filled="filled"
-        :green="sold || available"
-    >
-      {{ buttonText }}
-    </AppButton>
+    <NuxtLink to="/product/10">
+      <AppButton
+          :outlined="failure"
+          :black="failure"
+          :filled="filled"
+          :green="sold || available"
+      >
+        {{ buttonText }}
+      </AppButton>
+    </NuxtLink>
   </div>
 </template>
 
