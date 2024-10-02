@@ -70,11 +70,11 @@
         </div>
       </div>
       <div class="flex gap-6 pt-7">
-        <card/>
-        <card/>
-        <card/>
-        <card/>
-        <card/>
+        <card supersoon/>
+        <card supersoon/>
+        <card supersoon/>
+        <card supersoon/>
+        <card supersoon/>
       </div>
     </div>
     <div class="container pt-12 pb-9">

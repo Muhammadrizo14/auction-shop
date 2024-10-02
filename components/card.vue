@@ -5,9 +5,39 @@
     </div>
     <img src="../assets/img/card.png" alt="product">
     <h3 class="font-semibold text-sm pt-3 pb-2">Ноутбук ASER Swift SF314</h3>
-    <p class=" font-bold text-sm" :class="sold ? 'text-black' :'text-brand-orange'">112 250 ₽ </p>
-    <p v-if="!sold" class="text-[#C5BDBD] pt-2 pb-1 text-sm">Начало через </p>
-    <div v-if="sold" class="flex items-center pt-2 pb-6">
+    <p class=" font-bold text-sm" :class="supersoon ? 'text-brand-orange' :'text-black', !supersoon ? 'pb-4': ''">112 250 ₽ </p>
+
+
+    <div v-if="avaliable" class="flex items-center justify-between w-full pb-3">
+      <p class="text-brand-green font-bold text-sm">
+        Evgen487
+      </p>
+      <div>
+        <p class="text-brand-orange font-medium text-xs pb-1">80  сек</p>
+        <div class="w-[100px] rounded bg-[#C5CDE0] h-[4px] relative">
+          <div class="w-[60%]  rounded bg-brand-orange absolute h-full">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="soon" class="flex items-center justify-between w-full pb-3 ">
+      <p class="text-brand-orange text-sm">
+        Начало через
+      </p>
+      <div>
+        <p class="text-brand-orange font-medium text-xs pb-1">2  часа</p>
+        <div class="w-[100px] rounded bg-[#C5CDE0] h-[4px] relative">
+          <div class="w-[60%]  rounded bg-brand-orange absolute h-full">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p v-if="supersoon" class="text-[#C5BDBD] pt-2 pb-1 text-sm">Начало через </p>
+    <p v-if="failure" class="text-[#474444] pb-3 text-sm">Аукцион не состоялся !</p>
+
+    <div v-if="sold" class="flex items-center pb-4">
       <p class="text-sm"><span class="text-brand-green font-bold">Evgen487</span> стал победителем!</p>
       <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <rect width="20" height="20" fill="url(#pattern0_2013_1898)"/>
@@ -20,7 +50,7 @@
       </svg>
 
     </div>
-    <div v-if="!sold" class="flex items-center gap-1 text-center justify-center pb-4">
+    <div v-if="supersoon" class="flex items-center gap-1 text-center justify-center pb-4">
       <div class="w-[58px] bg-white py-2 px-3">
         <p class="font-semibold">00</p>
         <p class="font-semibold">Мин</p>
@@ -30,8 +60,11 @@
         <p class="font-semibold">Сек</p>
       </div>
     </div>
-    <AppButton :green="sold && true">
-      Стать участником
+    <AppButton :outlined="failure === true" :black="failure === true" :filled="filled === true" :green="sold || avaliable && true">
+      {{sold ? 'Посмотреть битву' : ''}}
+      {{avaliable ? 'Сделать ставку' : ''}}
+      {{soon || supersoon ? 'Стать участником' : ''}}
+      {{failure ? 'Посмотреть битву' : ''}}
     </AppButton>
   </div>
 </template>
@@ -39,6 +72,30 @@
 <script setup>
 const props = defineProps({
   sold: {
+    type: Boolean,
+    default: false,
+  },
+  soon: {
+    type: Boolean,
+    default: false,
+  },
+  supersoon: {
+    type: Boolean,
+    default: false,
+  },
+  avaliable: {
+    type: Boolean,
+    default: false,
+  },
+  filled: {
+    type: Boolean,
+    default: false,
+  },
+  green: {
+    type: Boolean,
+    default: false,
+  },
+  failure: {
     type: Boolean,
     default: false,
   },

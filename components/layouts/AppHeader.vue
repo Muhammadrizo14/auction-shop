@@ -20,22 +20,32 @@
           <NuxtLink class="font-semibold" to="/" activeClass="text-brand-orange">Главная</NuxtLink>
         </li>
         <li>
-          <NuxtLink class="font-semibold" to="#">Аукционы</NuxtLink>
+          <NuxtLink class="font-semibold" to="#" >Аукционы</NuxtLink>
         </li>
         <li>
-          <NuxtLink class="font-semibold" to="#">Каталог</NuxtLink>
+          <NuxtLink class="font-semibold" to="/catalog" activeClass="text-brand-orange">Каталог</NuxtLink>
         </li>
         <li>
           <NuxtLink class="font-semibold" to="#">Контакты</NuxtLink>
         </li>
       </ul>
-      <div class="flex items-center gap-6">
+      <div v-if="!logged" class="flex items-center gap-6">
         <button class="border border-black rounded-xl py-3 px-6  w-[148px]">
           Войти
         </button>
         <button  class="text-white bg-brand-orange rounded-xl py-3 px-6  w-[148px]">
           Регистрация
         </button>
+      </div>
+      <div v-else class="flex items-center gap-3">
+        <img src="../../assets/img/userpic.png" alt="userpic">
+        <div>
+          <h2 class="font-bold text-2lg">Ричард Церр</h2>
+          <div class="flex items-center justify-between gap-3">
+            <NuxtLink class="underline text-brand-blue"  to="/">Кабинет</NuxtLink>
+            <NuxtLink  class="underline text-brand-pink" to="/">Выход</NuxtLink>
+          </div>
+        </div>
       </div>
     </div>
     <ul class="flex gap-8 pt-3 pb-7">
@@ -79,13 +89,12 @@
           О нас
         </NuxtLink>
       </li>
-
     </ul>
   </header>
 </template>
 
 <script setup>
-
+const logged = ref(false)
 </script>
 
 <style lang="scss" scoped>

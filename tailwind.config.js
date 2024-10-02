@@ -34,7 +34,7 @@ export default {
         'brand-blue': '#017CC4',
         'brand-green': '#519339',
         'brand-lightgreen': '#01C495',
-        'brand-pink': '#01C495',
+        'brand-pink': '#C4016A',
         'brand-violet': '#5701C4',
       }
     },

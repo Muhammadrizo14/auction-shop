@@ -45,3 +45,18 @@ button {
 a {
   font-size: 18px;
 }
+
+
+.multiselect {
+  width: auto !important;
+  .multiselect__tags {
+    background-color: #F2F2F2;
+    padding-right: 74px;
+    border-radius: 12px;
+    .multiselect__single {
+      background-color: #F2F2F2;
+      font-size: 16px;
+      font-weight: normal;
+    }
+  }
+}

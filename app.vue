@@ -8,6 +8,7 @@
 
 
 <script setup>
+import 'vue-multiselect/dist/vue-multiselect.css'
 </script>
 
 <style>
