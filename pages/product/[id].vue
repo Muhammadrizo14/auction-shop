@@ -68,7 +68,7 @@
           </div>
         </div>
 
-        <div class="min-w-[553px] bg-white  rounded-xl py-6 px-7 flex flex-col justify-between">
+        <div class="min-w-[553px] bg-white  rounded-xl py-6 px-7 flex flex-col justify-between hidden">
           <div>
             <h2 class="text-brand-green font-bold text-2xl pb-6 uppercase">Аукцион</h2>
             <div class="flex flex-col gap-8">
@@ -106,6 +106,52 @@
           </div>
 
         </div>
+        <div class="min-w-[553px] bg-white  rounded-xl py-6 px-7 flex flex-col justify-between">
+          <div>
+            <h2 class="text-brand-green font-bold text-2xl pb-6 uppercase">Аукцион</h2>
+            <div class="flex flex-col gap-8">
+              <div class="border rounded-tl-none rounded-[20px] border-[#E1E5ED] py-2 px-3"
+                   style="background: linear-gradient(to bottom, #fff 0%, #EDF0F7 98%);">
+                <p><span class="font-bold">Igor294</span> в <span class="font-bold">14:35</span> делает ставку</p>
+                <div class="flex items-end justify-between w-full pb-3">
+                  <h2 class="text-brand-orange text-3xl pt-2">45 250 ₽ </h2>
+                  <div>
+                    <p class="text-brand-orange font-medium text-xs pb-1">80 сек</p>
+                    <div class="w-[100px] rounded bg-[#C5CDE0] h-[4px] relative">
+                      <div class="w-[60%]  rounded bg-brand-orange absolute h-full">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="pb-6">
+                  <p class="text-brand-orange font-medium text-xs pb-1">180 сек</p>
+                  <div class="w-full rounded bg-[#C5CDE0] h-[4px] relative">
+                    <div class="w-[60%]  rounded bg-brand-orange absolute h-full">
+                    </div>
+                  </div>
+                </div>
+                <AppButton filled class="max-w-[236px]">Сделать ставку</AppButton>
+              </div>
+              <div class="border rounded-tl-none rounded-[20px] border-[#E1E5ED] py-2 px-3"
+                   style="background: linear-gradient(to bottom, #fff 0%, #EDF0F7 98%);">
+                <p><span class="font-bold">Igor294</span> в <span class="font-bold">14:35</span> делает ставку</p>
+                <div class="flex items-end justify-between w-full pb-3">
+                  <h2 class="text-brand-orange text-3xl pt-2">45 250 ₽ </h2>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-between items-center pt-6">
+            <p class="font-bold text-2xl">450 ₽ </p>
+            <AppButton green filled class="max-w-[266px]">Выкупить товар</AppButton>
+          </div>
+
+        </div>
+
       </div>
     </div>
     <div class="container pt-10 pb-16">
