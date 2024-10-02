@@ -10,9 +10,11 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.36",
     "@nuxt/image": "^1.8.0",
     "nuxt": "^3.13.0",
     "sass": "^1.79.4",
+    "swiper": "^11.1.14",
     "vue": "latest",
     "vue-multiselect": "^3.1.0",
     "vue-router": "latest"
