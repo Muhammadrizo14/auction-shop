@@ -115,13 +115,7 @@
                 <p><span class="font-bold">Igor294</span> в <span class="font-bold">14:35</span> делает ставку</p>
                 <div class="flex items-end justify-between w-full pb-3">
                   <h2 class="text-brand-orange text-3xl pt-2">45 250 ₽ </h2>
-                  <div>
-                    <p class="text-brand-orange font-medium text-xs pb-1">80 сек</p>
-                    <div class="w-[100px] rounded bg-[#C5CDE0] h-[4px] relative">
-                      <div class="w-[60%]  rounded bg-brand-orange absolute h-full">
-                      </div>
-                    </div>
-                  </div>
+
                 </div>
               </div>
               <div>
